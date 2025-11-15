@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dr. K. Harish | Biomedical Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Academic profile of Dr. Kuchulakanti Harish, Assistant Professor (c), Department of Biomedical Engineering, University College of Engineering (A), Osmania University.">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --accent: #005f99;
+      --accent-soft: #e0f0ff;
+      --text-main: #222222;
+      --text-muted: #555555;
+      --border-soft: #dde2ec;
+      --shadow-soft: 0 6px 18px rgba(0,0,0,0.06);
+      --radius-lg: 10px;
+      --radius-xl: 14px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(135deg, #003b66, #0074b8);
+      color: #ffffff;
+      padding: 32px 16px 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .identity h1 {
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+    }
+
+    .identity h2 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-bottom: 4px;
+    }
+
+    .identity p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .contact {
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    .contact p {
+      margin-bottom: 2px;
+    }
+
+    .contact a {
+      color: #e0f3ff;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .id-links {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .id-links span {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.12);
+      margin-top: 18px;
+      border-radius: 999px;
+      padding: 4px 10px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      font-size: 0.86rem;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: #f5fbff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    main {
+      padding: 26px 16px 40px;
+    }
+
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto 22px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border-soft);
+    }
+
+    h3.section-title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      border-left: 4px solid var(--accent);
+      padding-left: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #003b66;
+    }
+
+    .subheading {
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      background: var(--accent-soft);
+      color: #003b66;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    ul {
+      margin-left: 18px;
+      margin-top: 4px;
+      font-size: 0.93rem;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .pub-item {
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+    }
+
+    .pub-item span.title {
+      font-weight: 600;
+    }
+
+    .pub-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .timeline-item {
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+
+    .timeline-item span.when {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .contact-card p {
+      margin-bottom: 3px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 18px 10px 26px;
+    }
+
+    @media (max-width: 768px) {
+      .contact {
+        text-align: left;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrapper">
+    <div class="top-bar">
+      <div class="identity">
+        <h1>Dr. Kuchulakanti Harish, Ph.D.</h1>
+        <h2>Assistant Professor (c)</h2>
+        <p>Department of Biomedical Engineering,<br>
+           University College of Engineering (A), Osmania University, Hyderabad.</p>
+        <p class="tagline">Medical Image Processing · Biomedical Electronics · Diagnostic & Therapeutic Equipment</p>
+      </div>
+      <div class="contact">
+        <p><strong>Email:</strong> <a href="mailto:harish.k@uceou.edu">harish.k@uceou.edu</a>,
+           <a href="mailto:k.harish501@gmail.com">k.harish501@gmail.com</a></p>
+        <p><strong>Mobile:</strong> <a href="tel:+919866289232">+91 98662 89232</a></p>
+        <div class="id-links">
+          <div><strong>Scholar IDs:</strong></div>
+          <span><a href="https://scholar.google.com/citations?user=AW_hXZwAAAAJ" target="_blank">Google Scholar</a></span>
+          <span><a href="https://orcid.org/0009-0000-8403-5590" target="_blank">ORCID</a></span>
+          <span>Scopus: 57216287110</span>
+          <span>Vidwan: 579465</span>
+          <span>ResearcherID: LXA-5792-2024</span>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#objective">Objective</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience & Teaching</a></li>
+        <li><a href="#skills">Skills & Technical</a></li>
+        <li><a href="#research">Ph.D. & Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#activities">Academic Roles</a></li>
+        <li><a href="#workshops">Workshops & Training</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#memberships">Memberships</a></li>
+        <li><a href="#contact">Personal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Objective -->
+  <section id="objective">
+    <div class="card">
+      <h3 class="section-title">Objective</h3>
+      <p>
+        To apply expertise in Biomedical Engineering within a leading organization, contributing to
+        institutional growth through high-quality teaching, research, and innovation in healthcare technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education + Key Skills -->
+  <section id="education">
+    <div class="two-col">
+      <div class="card">
+        <h3 class="section-title">Education</h3>
+        <div class="timeline-item">
+          <span class="when">Ph.D. (Biomedical Engineering)</span><br>
+          Department of Biomedical Engineering, University College of Engineering (A), Osmania University<br>
+          <span class="meta">2013 – 2023</span>
+        </div>
+        <div class="timeline-item">
+          <span class="when">M.E. (Biomedical Electronics)</span><br>
+          Department of Biomedical Engineering, University College of Engineering (A), Osmania University<br>
+          <span class="meta">2007 – 2009</span>
+        </div>
+        <div class="timeline-item">
+          <span class="when">B.Tech. (Electrical and Electronics Engineering)</span><br>
+          Jawaharlal Nehru Technological University, Hyderabad<br>
+          <span class="meta">2003 – 2007</span>
+        </div>
+      </div>
+
+      <div id="skills" class="card">
+        <h3 class="section-title">Key Skills</h3>
+        <ul>
+          <li>Strong ability to connect and collaborate across organizational levels.</li>
+          <li>Proven managerial and leadership skills in organizing conferences and workshops.</li>
+          <li>Experience in integrative negotiation and conflict resolution in academic settings.</li>
+          <li>Excellent interpersonal skills demonstrated through supervision of UG and PG projects.</li>
+          <li>Hands-on teaching with focus on interactive, application-oriented learning.</li>
+        </ul>
+
+        <h4 class="subheading">Technical Exposure</h4>
+        <ul>
+          <li><strong>Operating Systems:</strong> MS-DOS, Windows XP, Windows 7</li>
+          <li><strong>Software & Packages:</strong> Mimics, MATLAB, LabVIEW, PADS, MS Office</li>
+          <li><strong>Programming:</strong> C, Embedded C</li>
+          <li><strong>Networking:</strong> LAN design and implementation</li>
+          <li><strong>Medical Instruments:</strong> ECG, Physio-pack, analytical instruments</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Teaching -->
+  <section id="experience">
+    <div class="card">
+      <h3 class="section-title">Experience & Teaching</h3>
+      <p class="meta">Assistant Professor (c), Department of Biomedical Engineering, University College of Engineering (A), Osmania University — Since August 2010</p>
+
+      <h4 class="subheading">Teaching – Core Subjects</h4>
+      <div class="pill-row">
+        <span class="pill">Electronic Devices and Circuits</span>
+        <span class="pill">Electronic Circuits</span>
+        <span class="pill">Transducer and Biosensors Engineering</span>
+        <span class="pill">Cardio-Pulmonary Equipment</span>
+        <span class="pill">Artificial Intelligence & Neural Networks in Medicine</span>
+        <span class="pill">Medical Image Processing</span>
+        <span class="pill">Biomedical Signal Processing</span>
+        <span class="pill">Diagnostic & Therapeutic Equipment</span>
+        <span class="pill">Medical Embedded Systems & RTOS</span>
+        <span class="pill">Advanced Biomedical Equipment</span>
+        <span class="pill">Biomedical Instrumentation</span>
+        <span class="pill">Medical Informatics</span>
+      </div>
+
+      <h4 class="subheading">Laboratory Management</h4>
+      <ul>
+        <li>Electronic Devices and Circuits Laboratory</li>
+        <li>Electronic Circuits Laboratory</li>
+        <li>Biomedical Signal Processing Laboratory</li>
+        <li>Embedded Systems Laboratory</li>
+        <li>Transducer and Biosensors Laboratory</li>
+      </ul>
+
+      <h4 class="subheading">Project Supervision</h4>
+      <ul>
+        <li>Supervised 18 batches of undergraduate projects and 7 postgraduate projects.</li>
+        <li>Guided student teams showcasing innovative biomedical devices (e.g., EOG-based wheelchair control, IoT blood glucose monitoring, contactless vein and heart-rate detection).</li>
+      </ul>
+
+      <h4 class="subheading">Academic & Examination Roles</h4>
+      <ul>
+        <li>Coordinator, TG ECET 2025.</li>
+        <li>External examiner for NIMS, Government Institute of Electronics, UCEOU (ECE), and GRIET, Hyderabad.</li>
+        <li>Chief Superintendent for TET examinations at UCEOU.</li>
+        <li>Observer for competitive examinations including TSLPBRT, TSPSC, TSEAMCET, and CDAC.</li>
+        <li>Presiding Officer, Election Commission of India (poll duties).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Research & PhD -->
+  <section id="research">
+    <div class="card">
+      <h3 class="section-title">Ph.D. Research</h3>
+      <p><strong>Broad Area:</strong> Medical Image Processing</p>
+      <p><strong>Thesis Title:</strong> “A Novel Pulmonary Nodule Detection and Classification Framework using Statistical and Machine Learning Methods”</p>
+      <p><strong>Supervisor:</strong> Prof. P. Chandra Sekhar, Department of ECE, UCE, Osmania University</p>
+      <p><strong>Year of Award:</strong> February 2023</p>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications">
+    <div class="card">
+      <h3 class="section-title">Selected Publications</h3>
+
+      <h4 class="subheading">Book Chapters / International Proceedings</h4>
+
+      <div class="pub-item">
+        <span class="title">Electrooculogram Based Wheelchair Control in Real-Time</span><br>
+        Harikrishna M., Malini M., B. P. Santosh Kumar, <strong>Harish Kuchulakanti</strong> (2023).<br>
+        <span class="pub-meta">In: Proceedings of the Second International Conference on Emerging Trends in Engineering 2023,
+        Advances in Engineering Research, Atlantis Press (Springer Nature).</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">Impact of Various Data Splitting Ratios on the Performance of Machine Learning Models in the Classification of Lung Cancer</span><br>
+        Nazarkar A., <strong>Harish Kuchulakanti</strong>, Chandra Sekhar P., Sravya K. (2023).<br>
+        <span class="pub-meta">In: Emerging Trends in Engineering 2023, Atlantis Press (Springer Nature).</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">Unique Contactless Device to Detect Veins and Heart Rate</span><br>
+        M. Sreeja, Chapala Sara Grace, M. Deepika, Harikrishna M., <strong>Harish Kuchulakanti</strong> (2023).<br>
+        <span class="pub-meta">In: Emerging Trends in Engineering 2023, Atlantis Press (Springer Nature).</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">Brain Tumor Detection and Classification Using Transfer Learning Technique</span><br>
+        Ram A.V., <strong>Kuchulakanti H.</strong>, Raj T.S. (2022).<br>
+        <span class="pub-meta">In: Computational Vision and Bio-Inspired Computing, Advances in Intelligent Systems and Computing, vol. 1420, Springer.</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">A Review on Biomaterials Based Biosensors for Bilirubin Detection</span><br>
+        Kairamkonda D.D., Bitla S., <strong>Kuchulakanti H.</strong> (2022).<br>
+        <span class="pub-meta">In: Proceedings of Fourth International Conference on Inventive Material Science Applications, Advances in Sustainability Science and Technology, Springer.</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">A Review on Methods of Treatment for Diabetic Foot Ulcer</span><br>
+        Belly C., Bonula S.P., Kandukuri U.R., <strong>Kuchulakanti H.</strong> (2020).<br>
+        <span class="pub-meta">In: Advances in Decision Sciences, Image Processing, Security and Computer Vision, Learning and Analytics in Intelligent Systems, vol. 3, Springer.</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">IoT Aided Non-invasive NIR Blood Glucose Monitoring Device</span><br>
+        Chinthoju A., Chekka J.G., Nadigepu R., <strong>Kuchulakanti H.</strong> (2020).<br>
+        <span class="pub-meta">In: Advances in Decision Sciences, Image Processing, Security and Computer Vision, Springer.</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">Early Stage Squamous Cell Lung Cancer Detection</span><br>
+        <strong>Kuchulakanti H.</strong>, Paidimarry C. (2020).<br>
+        <span class="pub-meta">In: Advances in Decision Sciences, Image Processing, Security and Computer Vision, Springer.</span>
+      </div>
+
+      <h4 class="subheading">International Conference Papers</h4>
+
+      <div class="pub-item">
+        <span class="title">Blind Mate: A Friend to the Blind</span><br>
+        D. Kairamkonda, S. Chandana K., <strong>H. Kuchulakanti</strong> (2019).<br>
+        <span class="pub-meta">2019 IEEE 16th India Council International Conference (INDICON).</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">A Novel Approach for Lung Segmentation and Lung Nodule Detection</span><br>
+        <strong>Harish Kuchulakanti</strong>, Chandrasekhar P. (2018).<br>
+        <span class="pub-meta">ICRAAESCCT 2018, B.V. Raju Institute of Technology.</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">Quantification of RBCs and WBCs using Image Processing Techniques</span><br>
+        <strong>Harish Kuchulakanti</strong> et al. (2018).<br>
+        <span class="pub-meta">ICITE 2018, Osmania University.</span>
+      </div>
+
+      <div class="pub-item">
+        <span class="title">Tremor Quantification and its Measurements on Parkinsonian Patients</span><br>
+        K. Harish et al. (2009).<br>
+        <span class="pub-meta">2009 International Conference on Biomedical and Pharmaceutical Engineering.</span>
+      </div>
+
+      <h4 class="subheading">National Presentation</h4>
+      <div class="pub-item">
+        <span class="title">Non-Invasive Beat-to-Beat BP Measurement</span><br>
+        M. Venkateswara Rao, M. Sailaja, K. Harish, B. Harinatha Reddy.<br>
+        <span class="pub-meta">National Conference on Biotechnology, Bioinformatics and Bioengineering (BBB), Tamil Nadu, 2010.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic roles, engagements, reviewer -->
+  <section id="activities">
+    <div class="card">
+      <h3 class="section-title">Academic Engagements & Service</h3>
+
+      <h4 class="subheading">Departmental & Institutional Roles</h4>
+      <ul>
+        <li>Faculty Advisor, IEEE EMBS Student Chapter, UCE (A), Osmania University.</li>
+        <li>Departmental Coordinator – Timetables, ERP Cell, Profiling Committee, RUSA, TEQIP-II & III, Biomedical Engineering, UCEOU.</li>
+        <li>Member, NIRF data upload committee and M.E./M.Tech syllabi finalization committee.</li>
+        <li>Treasurer and Ex-General Secretary, Engineering College Teachers Association (C), UCE, OU.</li>
+      </ul>
+
+      <h4 class="subheading">Conference Organization</h4>
+      <ul>
+        <li>Editor, Souvenir – International Conference on Emerging Trends in Engineering (ICETE 2019), UCE (A), OU.</li>
+        <li>Technical Program Committee Member – ICETE 2023, ICETE 2019, ICITE 2018.</li>
+        <li>Chair, Medical Image Processing Session – ICETE 2023, UCEOU.</li>
+      </ul>
+
+      <h4 class="subheading">Workshops Organized</h4>
+      <ul>
+        <li>Student training program on Artificial Intelligence and Machine Learning (online), 5 Aug – 4 Sep 2021.</li>
+        <li>Two-day in-house training on Python Programming (with ESCI), 21–22 Sep 2019, UCEOU.</li>
+        <li>Five-day hands-on workshop on “3D Modeling and Image Processing”, 23–27 Jul 2018, Department of BME, UCEOU (TEQIP-III).</li>
+        <li>National level five-day workshop on “Electronic Product Design”, 2–6 Jan 2017, Department of BME, UCEOU (TEQIP-II).</li>
+      </ul>
+
+      <h4 class="subheading">Reviewer & Academic Service</h4>
+      <ul>
+        <li>Reviewer, IETE Journal of Research (2025).</li>
+        <li>Reviewer, Journal of Autonomous Intelligence (Citescore 1.1).</li>
+        <li>Reviewer, 7th IEEE DISCOVER 2023 (4 submissions) and ICETE 2023 (6 submissions).</li>
+        <li>Reviewer, 2025 International Conference on Artificial Intelligence and Data Engineering (AIDE-2025, IEEE Bangalore Section).</li>
+      </ul>
+
+      <h4 class="subheading">Guest Lectures</h4>
+      <ul>
+        <li>Expert talk on “3D Design and 3D Printer”, ATAL FDP on 3D Printing and Design, Department of BME, UCEOU (12 Nov 2021).</li>
+        <li>Guest lectures on “Maintenance of Ventilators”, Short-Term Training Programme, National Skill Training Institute, Hyderabad (05-09-2018 and 06-09-2018).</li>
+        <li>Guest lecture on “Isolation Amplifiers”, National level workshop on “Electronic Product Design”, Department of BME, UCEOU (2017).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Workshops & Training -->
+  <section id="workshops">
+    <div class="card">
+      <h3 class="section-title">Workshops, FDPs & Training (Selected)</h3>
+      <ul>
+        <li>Three-day National Workshop on “NAAC Accreditation and Outcome Based Education through AI-Powered Digital Learning”, Osmania University, 3–5 Mar 2025.</li>
+        <li>One-week FDP on “Novel Techniques in Materials Processing, Characterization and Applications”, Vardhaman College of Engineering, 3–7 Feb 2025.</li>
+        <li>ATAL FDP on “Additive Manufacturing Based Surface Modification Techniques for Innovative Medical Solutions”, Department of BME, UCEOU, 6–11 Jan 2025.</li>
+        <li>Short-term course “AI for Healthcare and Instrumentation (AI for HI-2024)”, NIT Jalandhar, 13–17 Nov 2024.</li>
+        <li>Short-term course on Telemedicine and Digital Health, MM-TTC NEHU, 4–9 Mar 2024.</li>
+        <li>FDP on “Machine Learning for Signal and Image Processing”, IIT Guwahati & UCEOU, 4–9 Dec 2023.</li>
+        <li>One-week FDP “AI for Multimedia Processing and Security”, NIT Patna (ISEA, MeitY), Feb 2023.</li>
+        <li>40-hour online program on Medical Image Processing (IIT Roorkee, MNIT Jaipur, NIT Patna, IIITDM Jabalpur, NIT Warangal), Aug–Sep 2022.</li>
+        <li>ATAL FDP on “3D Printing and Design”, Department of BME, UCEOU, Nov 2021.</li>
+        <li>Online faculty training on Artificial Intelligence and Machine Learning, IIT Kanpur, Jun 2021.</li>
+        <li>ATAL FDP on “Machine Learning”, RMK College of Engineering and Technology, Dec 2020.</li>
+        <li>Two-week course “Digital Transformation in Teaching-Learning Process”, IIT Bombay (Swayam, TEQIP-III), Apr 2020.</li>
+        <li>QIP on Medical Imaging (MedImg 2017), IIT Delhi, Apr 2017.</li>
+        <li>Workshops on cognitive sciences, neuro-signal processing, virtual instrumentation, MATLAB for Engineers, research methodology, and procurement guidelines under TEQIP.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Achievements, Products -->
+  <section id="achievements">
+    <div class="card">
+      <h3 class="section-title">Achievements & Innovation</h3>
+      <ul>
+        <li>Team member in showcasing four innovative biomedical products at BioAsia 2017 (Hitex, Hyderabad).</li>
+        <li>Student prototypes showcased in OUCE Hackathon 2023: tinnitus relief ear device (consolation prize).</li>
+        <li>All India GATE rank 1625 (2007).</li>
+        <li>Published international conference paper during M.E. program.</li>
+        <li>Successfully organized large-scale cultural event (Ganesh Navarathri) in University Hostel, 2009.</li>
+        <li>Completed course “Communication Skills and Personality Development”, CELT, Osmania University (2009).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Memberships -->
+  <section id="memberships">
+    <div class="card">
+      <h3 class="section-title">Professional Memberships</h3>
+      <ul>
+        <li>Member, IEEE Hyderabad Section (No. 94812764).</li>
+        <li>Member, IEEE Engineering in Medicine and Biology Society (EMBS).</li>
+        <li>Member, IEEE Signal Processing Society.</li>
+        <li>Member, IEEE Young Professionals.</li>
+        <li>Life Member, International Association of Engineers (IAENG) – No. 176697.</li>
+        <li>Life Member, Biomedical Engineering Society of India (BMESI) – No. 1386.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Personal & Contact -->
+  <section id="contact">
+    <div class="card contact-card">
+      <h3 class="section-title">Personal Profile & Contact</h3>
+      <p><strong>Name:</strong> Dr. K. Harish</p>
+      <p><strong>Father’s Name:</strong> Sri K. Manmohan Rao</p>
+      <p><strong>Languages Known:</strong> Telugu, English, Marathi, Kannada, Hindi</p>
+      <p><strong>Nationality:</strong> Indian</p>
+
+      <h4 class="subheading">Contact</h4>
+      <p><strong>Institution:</strong> Department of Biomedical Engineering,<br>
+         University College of Engineering (A), Osmania University, Hyderabad, India.</p>
+      <p><strong>Email:</strong> <a href="mailto:harish.k@uceou.edu">harish.k@uceou.edu</a>,
+         <a href="mailto:k.harish501@gmail.com">k.harish501@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919866289232">+91 98662 89232</a></p>
+      <!--
+        If you upload your PDF CV into the same GitHub repo, you can link it here, e.g.:
+        <p><a href="Dr_K_Harish_CV.pdf" target="_blank">Download Full CV (PDF)</a></p>
+      -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Dr. Kuchulakanti Harish · Department of Biomedical Engineering, UCE (A), Osmania University
+</footer>
+
+<script>
+  // Simple script to keep the footer year current
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
