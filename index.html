@@ -1,640 +1,1476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dr. K. Harish | Biomedical Engineering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Academic profile of Dr. Kuchulakanti Harish, Assistant Professor (c), Department of Biomedical Engineering, University College of Engineering (A), Osmania University.">
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --card-bg: #ffffff;
-      --accent: #005f99;
-      --accent-soft: #e0f0ff;
-      --text-main: #222222;
-      --text-muted: #555555;
-      --border-soft: #dde2ec;
-      --shadow-soft: 0 6px 18px rgba(0,0,0,0.06);
-      --radius-lg: 10px;
-      --radius-xl: 14px;
-      --max-width: 1100px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. K. Harish - Biomedical Engineering Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #112240;
+            --accent-color: #64ffda;
+            --text-primary: #e6f1ff;
+            --text-secondary: #8892b0;
+            --bg-light: #0a192f;
+            --bg-white: #112240;
+            --border-color: #233554;
+            --shadow: 0 4px 20px rgba(10, 25, 47, 0.5);
+            --gradient: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            --gradient-accent: linear-gradient(135deg, #64ffda 0%, #00aaff 100%);
+        }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(100, 255, 218, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 170, 255, 0.05) 0%, transparent 20%);
+        }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        /* Header and Navigation */
+        header {
+            background: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            border-bottom: 1px solid var(--border-color);
+        }
 
-    header {
-      background: linear-gradient(135deg, #003b66, #0074b8);
-      color: #ffffff;
-      padding: 32px 16px 22px;
-      box-shadow: var(--shadow-soft);
-    }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
 
-    .wrapper {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 10px;
-    }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
 
-    .identity h1 {
-      font-size: 2rem;
-      letter-spacing: 0.03em;
-      margin-bottom: 4px;
-    }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    .identity h2 {
-      font-size: 1.05rem;
-      font-weight: 500;
-      opacity: 0.9;
-      margin-bottom: 4px;
-    }
+        .nav-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
 
-    .identity p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+            transition: width 0.3s ease;
+        }
 
-    .contact {
-      font-size: 0.9rem;
-      text-align: right;
-    }
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
 
-    .contact p {
-      margin-bottom: 2px;
-    }
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
 
-    .contact a {
-      color: #e0f3ff;
-    }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
 
-    .id-links {
-      margin-top: 6px;
-      font-size: 0.85rem;
-      opacity: 0.9;
-    }
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            background: var(--bg-light);
+        }
 
-    .id-links span {
-      display: inline-block;
-      margin-left: 10px;
-    }
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            position: relative;
+            overflow: hidden;
+        }
 
-    nav {
-      background: rgba(0, 0, 0, 0.12);
-      margin-top: 18px;
-      border-radius: 999px;
-      padding: 4px 10px;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(100, 255, 218, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      font-size: 0.86rem;
-    }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.1; }
+        }
 
-    nav a {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
-      color: #f5fbff;
-      text-decoration: none;
-    }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
 
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.18);
-    }
+        .profile-image {
+            text-align: center;
+        }
 
-    main {
-      padding: 26px 16px 40px;
-    }
+        .profile-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
 
-    section {
-      max-width: var(--max-width);
-      margin: 0 auto 22px;
-    }
+        .profile-image:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+        }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 18px 16px;
-      border: 1px solid var(--border-soft);
-    }
+        .hero-content {
+            color: var(--text-primary);
+        }
 
-    h3.section-title {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      border-left: 4px solid var(--accent);
-      padding-left: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #003b66;
-    }
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
 
-    .subheading {
-      font-weight: 600;
-      margin-top: 10px;
-      margin-bottom: 4px;
-    }
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            font-weight: 500;
+            color: var(--accent-color);
+        }
 
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
-    }
+        .hero-content .department {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+            color: var(--text-secondary);
+        }
 
-    .pill {
-      background: var(--accent-soft);
-      color: #003b66;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-    }
+        .hero-content .expertise {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+            font-weight: 500;
+            color: var(--accent-color);
+        }
 
-    ul {
-      margin-left: 18px;
-      margin-top: 4px;
-      font-size: 0.93rem;
-    }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
 
-    li {
-      margin-bottom: 3px;
-    }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            background: rgba(17, 34, 64, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 18px;
-    }
+        .contact-item:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+        }
 
-    .meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+        .contact-item i {
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
 
-    .tagline {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
+        .contact-item:hover i {
+            transform: scale(1.2);
+        }
 
-    .pub-item {
-      margin-bottom: 10px;
-      font-size: 0.92rem;
-    }
+        .scholar-ids {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
 
-    .pub-item span.title {
-      font-weight: 600;
-    }
+        .scholar-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(17, 34, 64, 0.7);
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            gap: 0.5rem;
+        }
 
-    .pub-meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+        .scholar-link:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+        }
 
-    .timeline-item {
-      margin-bottom: 8px;
-      font-size: 0.92rem;
-    }
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .timeline-item span.when {
-      font-weight: 600;
-      color: var(--accent);
-    }
+        .section:nth-child(even) {
+            background: var(--bg-white);
+        }
 
-    .contact-card p {
-      margin-bottom: 3px;
-    }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-primary);
+            position: relative;
+            font-weight: 700;
+        }
 
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      padding: 18px 10px 26px;
-    }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
 
-    @media (max-width: 768px) {
-      .contact {
-        text-align: left;
-      }
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+        .section-title span {
+            color: var(--accent-color);
+        }
+
+        /* Card Styles */
+        .card {
+            background: rgba(17, 34, 64, 0.5);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(10, 25, 47, 0.6);
+            border: 1px solid rgba(100, 255, 218, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .card-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-list li:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .experience-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .experience-description {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Publications Section */
+        .publications-container {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .publication-category {
+            margin-bottom: 2rem;
+        }
+
+        .publication-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .publication-item {
+            background: rgba(17, 34, 64, 0.5);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+            border-left: 4px solid #00aaff;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-venue {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .achievement-card {
+            background: var(--gradient);
+            color: var(--text-primary);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(100, 255, 218, 0.2);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-card:hover .achievement-icon {
+            transform: scale(1.1);
+        }
+
+        .achievement-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-date {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-value {
+            color: var(--text-secondary);
+        }
+
+        .contact-value a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--text-primary);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--primary-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-container {
+                padding: 2rem 1rem;
+            }
+
+            .profile-image img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Progress bars for skills */
+        .skill-bar {
+            background: rgba(17, 34, 64, 0.5);
+            border-radius: 10px;
+            height: 8px;
+            margin: 0.5rem 0 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient-accent);
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+
+        /* Loader */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(100, 255, 218, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 170, 255, 0.05) 0%, transparent 20%);
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-circle {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(17, 34, 64, 0.7);
+            border-top: 3px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+            z-index: 100;
+            font-weight: bold;
+            border: 1px solid var(--border-color);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: #00aaff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section {
+                padding: 2rem 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .scholar-ids {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="wrapper">
-    <div class="top-bar">
-      <div class="identity">
-        <h1>Dr. Kuchulakanti Harish, Ph.D.</h1>
-        <h2>Assistant Professor (c)</h2>
-        <p>Department of Biomedical Engineering,<br>
-           University College of Engineering (A), Osmania University, Hyderabad.</p>
-        <p class="tagline">Medical Image Processing · Biomedical Electronics · Diagnostic & Therapeutic Equipment</p>
-      </div>
-      <div class="contact">
-        <p><strong>Email:</strong> <a href="mailto:harish.k@uceou.edu">harish.k@uceou.edu</a>,
-           <a href="mailto:k.harish501@gmail.com">k.harish501@gmail.com</a></p>
-        <p><strong>Mobile:</strong> <a href="tel:+919866289232">+91 98662 89232</a></p>
-        <div class="id-links">
-          <div><strong>Scholar IDs:</strong></div>
-          <span><a href="https://scholar.google.com/citations?user=AW_hXZwAAAAJ" target="_blank">Google Scholar</a></span>
-          <span><a href="https://orcid.org/0009-0000-8403-5590" target="_blank">ORCID</a></span>
-          <span>Scopus: 57216287110</span>
-          <span>Vidwan: 579465</span>
-          <span>ResearcherID: LXA-5792-2024</span>
-        </div>
-      </div>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-circle"></div>
     </div>
 
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#objective">Objective</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience & Teaching</a></li>
-        <li><a href="#skills">Skills & Technical</a></li>
-        <li><a href="#research">Ph.D. & Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#activities">Academic Roles</a></li>
-        <li><a href="#workshops">Workshops & Training</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#memberships">Memberships</a></li>
-        <li><a href="#contact">Personal</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">Dr. K. Harish</div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#objective" class="nav-link">Objective</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<main>
-  <!-- Objective -->
-  <section id="objective">
-    <div class="card">
-      <h3 class="section-title">Objective</h3>
-      <p>
-        To apply expertise in Biomedical Engineering within a leading organization, contributing to
-        institutional growth through high-quality teaching, research, and innovation in healthcare technologies.
-      </p>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container fade-in">
+                <div class="profile-image">
+                    <img src="Harish.jpg" alt="Dr. K. Harish">
+                </div>
+                <div class="hero-content">
+                    <h1>Dr. Kuchulakanti Harish, Ph.D.</h1>
+                    <p class="subtitle">Assistant Professor (c)</p>
+                    <p class="department">Department of Biomedical Engineering</p>
+                    <p class="department">University College of Engineering (A), Osmania University, Hyderabad</p>
+                    <p class="expertise">Medical Image Processing · Biomedical Electronics · Diagnostic & Therapeutic Equipment</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>harish.k@uceou.edu</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98662 89232</span>
+                        </div>
+                    </div>
+
+                    <div class="scholar-ids">
+                        <a href="#" class="scholar-link">
+                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                        </a>
+                        <a href="#" class="scholar-link">
+                            <i class="fas fa-id-badge"></i> ORCID
+                        </a>
+                        <a href="#" class="scholar-link">
+                            <i class="fas fa-database"></i> Scopus: 57216287110
+                        </a>
+                        <a href="#" class="scholar-link">
+                            <i class="fas fa-user"></i> Vidwan: 579465
+                        </a>
+                        <a href="#" class="scholar-link">
+                            <i class="fas fa-researchgate"></i> ResearcherID: LXA-5792-2024
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objective Section -->
+        <section id="objective" class="section fade-in">
+            <h2 class="section-title">Career <span>Objective</span></h2>
+            <div class="card">
+                <p>To apply expertise in Biomedical Engineering within a leading organization, contributing to institutional growth through high-quality teaching, research, and innovation in healthcare technologies.</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section fade-in">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Ph.D. (Biomedical Engineering)</h3>
+                        <span class="card-date">2013 – 2023</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Department of Biomedical Engineering</p>
+                        <p>University College of Engineering (A), Osmania University</p>
+                        <p><strong>Thesis:</strong> "A Novel Pulmonary Nodule Detection and Classification Framework using Statistical and Machine Learning Methods"</p>
+                        <p><strong>Supervisor:</strong> Prof. P. Chandra Sekhar</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">M.E. (Biomedical Electronics)</h3>
+                        <span class="card-date">2007 – 2009</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Department of Biomedical Engineering</p>
+                        <p>University College of Engineering (A), Osmania University</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">B.Tech. (Electrical and Electronics Engineering)</h3>
+                        <span class="card-date">2003 – 2007</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Jawaharlal Nehru Technological University, Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section fade-in">
+            <h2 class="section-title">Experience & <span>Teaching</span></h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Assistant Professor (c)</h3>
+                        <p>Department of Biomedical Engineering, University College of Engineering (A), Osmania University</p>
+                    </div>
+                    <span class="experience-date">Since August 2010</span>
+                </div>
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem; color: var(--accent-color);">Teaching – Core Subjects</h3>
+            <div class="card">
+                <div class="card-content">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Electronic Devices and Circuits</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Electronic Circuits</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Transducer and Biosensors Engineering</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Cardio-Pulmonary Equipment</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Artificial Intelligence & Neural Networks in Medicine</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Medical Image Processing</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Biomedical Signal Processing</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Diagnostic & Therapeutic Equipment</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Medical Embedded Systems & RTOS</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Advanced Biomedical Equipment</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Biomedical Instrumentation</span>
+                        <span><i class="fas fa-book" style="color: var(--accent-color);"></i> Medical Informatics</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem; color: var(--accent-color);">Laboratory Management</h3>
+            <div class="card">
+                <div class="card-content">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <span><i class="fas fa-flask" style="color: var(--accent-color);"></i> Electronic Devices and Circuits Laboratory</span>
+                        <span><i class="fas fa-flask" style="color: var(--accent-color);"></i> Electronic Circuits Laboratory</span>
+                        <span><i class="fas fa-flask" style="color: var(--accent-color);"></i> Biomedical Signal Processing Laboratory</span>
+                        <span><i class="fas fa-flask" style="color: var(--accent-color);"></i> Embedded Systems Laboratory</span>
+                        <span><i class="fas fa-flask" style="color: var(--accent-color);"></i> Transducer and Biosensors Laboratory</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem; color: var(--accent-color);">Project Supervision</h3>
+            <div class="card">
+                <div class="card-content">
+                    <p>Supervised <strong>18 batches of undergraduate projects</strong> and <strong>7 postgraduate projects</strong></p>
+                    <p style="margin-top: 1rem;">Guided student teams showcasing innovative biomedical devices including EOG-based wheelchair control, IoT blood glucose monitoring, and contactless vein and heart-rate detection systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section fade-in">
+            <h2 class="section-title">Skills & <span>Technical</span></h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Key Skills</h3>
+                    <ul class="skill-list">
+                        <li>Strong ability to connect and collaborate across organizational levels</li>
+                        <li>Proven managerial and leadership skills in organizing conferences and workshops</li>
+                        <li>Experience in integrative negotiation and conflict resolution in academic settings</li>
+                        <li>Excellent interpersonal skills demonstrated through supervision of UG and PG projects</li>
+                        <li>Hands-on teaching with focus on interactive, application-oriented learning</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Exposure</h3>
+                    <h4 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">Operating Systems</h4>
+                    <ul class="skill-list">
+                        <li>MS-DOS, Windows XP, Windows 7</li>
+                    </ul>
+                    <h4 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">Software & Packages</h4>
+                    <ul class="skill-list">
+                        <li>Mimics, MATLAB, LabVIEW, PADS, MS Office</li>
+                    </ul>
+                    <h4 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">Programming</h4>
+                    <ul class="skill-list">
+                        <li>C, Embedded C</li>
+                    </ul>
+                    <h4 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">Networking</h4>
+                    <ul class="skill-list">
+                        <li>LAN design and implementation</li>
+                    </ul>
+                    <h4 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">Medical Instruments</h4>
+                    <ul class="skill-list">
+                        <li>ECG, Physio-pack, analytical instruments</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section fade-in">
+            <h2 class="section-title">Ph.D. <span>Research</span></h2>
+            <div class="card">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Broad Area: Medical Image Processing</h3>
+                <p><strong>Thesis Title:</strong> "A Novel Pulmonary Nodule Detection and Classification Framework using Statistical and Machine Learning Methods"</p>
+                <p style="margin-top: 1rem;"><strong>Supervisor:</strong> Prof. P. Chandra Sekhar, Department of ECE, UCE, Osmania University</p>
+                <p style="margin-top: 0.5rem;"><strong>Year of Award:</strong> February 2023</p>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section fade-in">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-container">
+                <!-- Book Chapters / International Proceedings -->
+                <div class="publication-category">
+                    <h3>Book Chapters / International Proceedings</h3>
+                    <div class="publication-item">
+                        <div class="publication-title">Electrooculogram Based Wheelchair Control in Real-Time</div>
+                        <div class="publication-authors">Harikrishna M., Malini M., B. P. Santosh Kumar, Harish Kuchulakanti (2023)</div>
+                        <div class="publication-venue">Proceedings of the Second International Conference on Emerging Trends in Engineering 2023, Advances in Engineering Research, Atlantis Press (Springer Nature)</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">Impact of Various Data Splitting Ratios on the Performance of Machine Learning Models in the Classification of Lung Cancer</div>
+                        <div class="publication-authors">Nazarkar A., Harish Kuchulakanti, Chandra Sekhar P., Sravya K. (2023)</div>
+                        <div class="publication-venue">Emerging Trends in Engineering 2023, Atlantis Press (Springer Nature)</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">Unique Contactless Device to Detect Veins and Heart Rate</div>
+                        <div class="publication-authors">M. Sreeja, Chapala Sara Grace, M. Deepika, Harikrishna M., Harish Kuchulakanti (2023)</div>
+                        <div class="publication-venue">Emerging Trends in Engineering 2023, Atlantis Press (Springer Nature)</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">Brain Tumor Detection and Classification Using Transfer Learning Technique</div>
+                        <div class="publication-authors">Ram A.V., Kuchulakanti H., Raj T.S. (2022)</div>
+                        <div class="publication-venue">Computational Vision and Bio-Inspired Computing, Advances in Intelligent Systems and Computing, vol. 1420, Springer</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">A Review on Biomaterials Based Biosensors for Bilirubin Detection</div>
+                        <div class="publication-authors">Kairamkonda D.D., Bitla S., Kuchulakanti H. (2022)</div>
+                        <div class="publication-venue">Proceedings of Fourth International Conference on Inventive Material Science Applications, Advances in Sustainability Science and Technology, Springer</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">A Review on Methods of Treatment for Diabetic Foot Ulcer</div>
+                        <div class="publication-authors">Belly C., Bonula S.P., Kandukuri U.R., Kuchulakanti H. (2020)</div>
+                        <div class="publication-venue">Advances in Decision Sciences, Image Processing, Security and Computer Vision, Learning and Analytics in Intelligent Systems, vol. 3, Springer</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">IoT Aided Non-invasive NIR Blood Glucose Monitoring Device</div>
+                        <div class="publication-authors">Chinthoju A., Chekka J.G., Nadigepu R., Kuchulakanti H. (2020)</div>
+                        <div class="publication-venue">Advances in Decision Sciences, Image Processing, Security and Computer Vision, Springer</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">Early Stage Squamous Cell Lung Cancer Detection</div>
+                        <div class="publication-authors">Kuchulakanti H., Paidimarry C. (2020)</div>
+                        <div class="publication-venue">Advances in Decision Sciences, Image Processing, Security and Computer Vision, Springer</div>
+                    </div>
+                </div>
+
+                <!-- International Conference Papers -->
+                <div class="publication-category">
+                    <h3>International Conference Papers</h3>
+                    <div class="publication-item">
+                        <div class="publication-title">Blind Mate: A Friend to the Blind</div>
+                        <div class="publication-authors">D. Kairamkonda, S. Chandana K., H. Kuchulakanti (2019)</div>
+                        <div class="publication-venue">2019 IEEE 16th India Council International Conference (INDICON)</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">A Novel Approach for Lung Segmentation and Lung Nodule Detection</div>
+                        <div class="publication-authors">Harish Kuchulakanti, Chandrasekhar P. (2018)</div>
+                        <div class="publication-venue">ICRAAESCCT 2018, B.V. Raju Institute of Technology</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">Quantification of RBCs and WBCs using Image Processing Techniques</div>
+                        <div class="publication-authors">Harish Kuchulakanti et al. (2018)</div>
+                        <div class="publication-venue">ICITE 2018, Osmania University</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">Tremor Quantification and its Measurements on Parkinsonian Patients</div>
+                        <div class="publication-authors">K. Harish et al. (2009)</div>
+                        <div class="publication-venue">2009 International Conference on Biomedical and Pharmaceutical Engineering</div>
+                    </div>
+                </div>
+
+                <!-- National Presentation -->
+                <div class="publication-category">
+                    <h3>National Presentation</h3>
+                    <div class="publication-item">
+                        <div class="publication-title">Non-Invasive Beat-to-Beat BP Measurement</div>
+                        <div class="publication-authors">M. Venkateswara Rao, M. Sailaja, K. Harish, B. Harinatha Reddy</div>
+                        <div class="publication-venue">National Conference on Biotechnology, Bioinformatics and Bioengineering (BBB), Tamil Nadu, 2010</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Roles Section -->
+        <section id="academic-roles" class="section fade-in">
+            <h2 class="section-title">Academic <span>Roles</span></h2>
+            <div class="card">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Departmental & Institutional Roles</h3>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li>Faculty Advisor, IEEE EMBS Student Chapter, UCE (A), Osmania University</li>
+                        <li>Departmental Coordinator – Timetables, ERP Cell, Profiling Committee, RUSA, TEQIP-II & III, Biomedical Engineering, UCEOU</li>
+                        <li>Member, NIRF data upload committee and M.E./M.Tech syllabi finalization committee</li>
+                        <li>Treasurer and Ex-General Secretary, Engineering College Teachers Association (C), UCE, OU</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Conference Organization</h3>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li>Editor, Souvenir – International Conference on Emerging Trends in Engineering (ICETE 2019), UCE (A), OU</li>
+                        <li>Technical Program Committee Member – ICETE 2023, ICETE 2019, ICITE 2018</li>
+                        <li>Chair, Medical Image Processing Session – ICETE 2023, UCEOU</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Workshops Organized</h3>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li>Student training program on Artificial Intelligence and Machine Learning (online), 5 Aug – 4 Sep 2021</li>
+                        <li>Two-day in-house training on Python Programming (with ESCI), 21–22 Sep 2019, UCEOU</li>
+                        <li>Five-day hands-on workshop on "3D Modeling and Image Processing", 23–27 Jul 2018, Department of BME, UCEOU (TEQIP-III)</li>
+                        <li>National level five-day workshop on "Electronic Product Design", 2–6 Jan 2017, Department of BME, UCEOU (TEQIP-II)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Reviewer & Academic Service</h3>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li>Reviewer, IETE Journal of Research (2025)</li>
+                        <li>Reviewer, Journal of Autonomous Intelligence (Citescore 1.1)</li>
+                        <li>Reviewer, 7th IEEE DISCOVER 2023 (4 submissions) and ICETE 2023 (6 submissions)</li>
+                        <li>Reviewer, 2025 International Conference on Artificial Intelligence and Data Engineering (AIDE-2025, IEEE Bangalore Section)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Guest Lectures</h3>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li>Expert talk on "3D Design and 3D Printer", ATAL FDP on 3D Printing and Design, Department of BME, UCEOU (12 Nov 2021)</li>
+                        <li>Guest lectures on "Maintenance of Ventilators", Short-Term Training Programme, National Skill Training Institute, Hyderabad (05-09-2018 and 06-09-2018)</li>
+                        <li>Guest lecture on "Isolation Amplifiers", National level workshop on "Electronic Product Design", Department of BME, UCEOU (2017)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Workshops, FDPs & Training (Selected)</h3>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li>Three-day National Workshop on "NAAC Accreditation and Outcome Based Education through AI-Powered Digital Learning", Osmania University, 3–5 Mar 2025</li>
+                        <li>One-week FDP on "Novel Techniques in Materials Processing, Characterization and Applications", Vardhaman College of Engineering, 3–7 Feb 2025</li>
+                        <li>ATAL FDP on "Additive Manufacturing Based Surface Modification Techniques for Innovative Medical Solutions", Department of BME, UCEOU, 6–11 Jan 2025</li>
+                        <li>Short-term course "AI for Healthcare and Instrumentation (AI for HI-2024)", NIT Jalandhar, 13–17 Nov 2024</li>
+                        <li>Short-term course on Telemedicine and Digital Health, MM-TTC NEHU, 4–9 Mar 2024</li>
+                        <li>FDP on "Machine Learning for Signal and Image Processing", IIT Guwahati & UCEOU, 4–9 Dec 2023</li>
+                        <li>One-week FDP "AI for Multimedia Processing and Security", NIT Patna (ISEA, MeitY), Feb 2023</li>
+                        <li>40-hour online program on Medical Image Processing (IIT Roorkee, MNIT Jaipur, NIT Patna, IIITDM Jabalpur, NIT Warangal), Aug–Sep 2022</li>
+                        <li>ATAL FDP on "3D Printing and Design", Department of BME, UCEOU, Nov 2021</li>
+                        <li>Online faculty training on Artificial Intelligence and Machine Learning, IIT Kanpur, Jun 2021</li>
+                        <li>ATAL FDP on "Machine Learning", RMK College of Engineering and Technology, Dec 2020</li>
+                        <li>Two-week course "Digital Transformation in Teaching-Learning Process", IIT Bombay (Swayam, TEQIP-III), Apr 2020</li>
+                        <li>QIP on Medical Imaging (MedImg 2017), IIT Delhi, Apr 2017</li>
+                        <li>Workshops on cognitive sciences, neuro-signal processing, virtual instrumentation, MATLAB for Engineers, research methodology, and procurement guidelines under TEQIP</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section fade-in">
+            <h2 class="section-title">Achievements & <span>Innovation</span></h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-title">Team member in showcasing four innovative biomedical products at BioAsia 2017 (Hitex, Hyderabad)</div>
+                    <div class="achievement-date">2017</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-title">Student prototypes showcased in OUCE Hackathon 2023: tinnitus relief ear device (consolation prize)</div>
+                    <div class="achievement-date">2023</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-title">All India GATE rank 1625 (2007)</div>
+                    <div class="achievement-date">2007</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="achievement-title">Published international conference paper during M.E. program</div>
+                    <div class="achievement-date">2009</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-title">Successfully organized large-scale cultural event (Ganesh Navarathri) in University Hostel</div>
+                    <div class="achievement-date">2009</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="achievement-title">Completed course "Communication Skills and Personality Development", CELT, Osmania University</div>
+                    <div class="achievement-date">2009</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memberships Section -->
+        <section id="memberships" class="section fade-in">
+            <h2 class="section-title">Professional <span>Memberships</span></h2>
+            <div class="card">
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li><i class="fas fa-user-tie" style="color: var(--accent-color);"></i> Member, IEEE Hyderabad Section (No. 94812764)</li>
+                        <li><i class="fas fa-heartbeat" style="color: var(--accent-color);"></i> Member, IEEE Engineering in Medicine and Biology Society (EMBS)</li>
+                        <li><i class="fas fa-wave-square" style="color: var(--accent-color);"></i> Member, IEEE Signal Processing Society</li>
+                        <li><i class="fas fa-briefcase" style="color: var(--accent-color);"></i> Member, IEEE Young Professionals</li>
+                        <li><i class="fas fa-globe" style="color: var(--accent-color);"></i> Life Member, International Association of Engineers (IAENG) – No. 176697</li>
+                        <li><i class="fas fa-microscope" style="color: var(--accent-color);"></i> Life Member, Biomedical Engineering Society of India (BMESI) – No. 1386</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Section -->
+        <section id="personal" class="section fade-in">
+            <h2 class="section-title">Personal <span>Profile</span></h2>
+            <div class="card">
+                <div class="card-content">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div>
+                            <strong>Name:</strong> Dr. K. Harish
+                        </div>
+                        <div>
+                            <strong>Father's Name:</strong> Sri K. Manmohan Rao
+                        </div>
+                        <div>
+                            <strong>Nationality:</strong> Indian
+                        </div>
+                        <div>
+                            <strong>Languages Known:</strong> Telugu, English, Marathi, Kannada, Hindi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section fade-in">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:harish.k@uceou.edu">harish.k@uceou.edu</a><br>
+                        <a href="mailto:k.harish501@gmail.com">k.harish501@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">
+                        <a href="tel:+919866289232">+91 98662 89232</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-label">Address</div>
+                    <div class="contact-value">
+                        Department of Biomedical Engineering<br>
+                        University College of Engineering (A)<br>
+                        Osmania University, Hyderabad, India
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="contact-label">Follow My Research</div>
+                    <div class="contact-value">
+                        <a href="#">Google Scholar</a> | 
+                        <a href="#">ORCID</a> | 
+                        <a href="#">Scopus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dr. Kuchulakanti Harish · Department of Biomedical Engineering, UCE (A), Osmania University</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Made with <i class="fas fa-heart" style="color: var(--accent-color);"></i> and <i class="fas fa-mug-hot" style="color: var(--accent-color);"></i></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
     </div>
-  </section>
 
-  <!-- Education + Key Skills -->
-  <section id="education">
-    <div class="two-col">
-      <div class="card">
-        <h3 class="section-title">Education</h3>
-        <div class="timeline-item">
-          <span class="when">Ph.D. (Biomedical Engineering)</span><br>
-          Department of Biomedical Engineering, University College of Engineering (A), Osmania University<br>
-          <span class="meta">2013 – 2023</span>
-        </div>
-        <div class="timeline-item">
-          <span class="when">M.E. (Biomedical Electronics)</span><br>
-          Department of Biomedical Engineering, University College of Engineering (A), Osmania University<br>
-          <span class="meta">2007 – 2009</span>
-        </div>
-        <div class="timeline-item">
-          <span class="when">B.Tech. (Electrical and Electronics Engineering)</span><br>
-          Jawaharlal Nehru Technological University, Hyderabad<br>
-          <span class="meta">2003 – 2007</span>
-        </div>
-      </div>
+    <script>
+        // Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 500);
+        });
 
-      <div id="skills" class="card">
-        <h3 class="section-title">Key Skills</h3>
-        <ul>
-          <li>Strong ability to connect and collaborate across organizational levels.</li>
-          <li>Proven managerial and leadership skills in organizing conferences and workshops.</li>
-          <li>Experience in integrative negotiation and conflict resolution in academic settings.</li>
-          <li>Excellent interpersonal skills demonstrated through supervision of UG and PG projects.</li>
-          <li>Hands-on teaching with focus on interactive, application-oriented learning.</li>
-        </ul>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
 
-        <h4 class="subheading">Technical Exposure</h4>
-        <ul>
-          <li><strong>Operating Systems:</strong> MS-DOS, Windows XP, Windows 7</li>
-          <li><strong>Software & Packages:</strong> Mimics, MATLAB, LabVIEW, PADS, MS Office</li>
-          <li><strong>Programming:</strong> C, Embedded C</li>
-          <li><strong>Networking:</strong> LAN design and implementation</li>
-          <li><strong>Medical Instruments:</strong> ECG, Physio-pack, analytical instruments</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
-  <!-- Experience & Teaching -->
-  <section id="experience">
-    <div class="card">
-      <h3 class="section-title">Experience & Teaching</h3>
-      <p class="meta">Assistant Professor (c), Department of Biomedical Engineering, University College of Engineering (A), Osmania University — Since August 2010</p>
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
 
-      <h4 class="subheading">Teaching – Core Subjects</h4>
-      <div class="pill-row">
-        <span class="pill">Electronic Devices and Circuits</span>
-        <span class="pill">Electronic Circuits</span>
-        <span class="pill">Transducer and Biosensors Engineering</span>
-        <span class="pill">Cardio-Pulmonary Equipment</span>
-        <span class="pill">Artificial Intelligence & Neural Networks in Medicine</span>
-        <span class="pill">Medical Image Processing</span>
-        <span class="pill">Biomedical Signal Processing</span>
-        <span class="pill">Diagnostic & Therapeutic Equipment</span>
-        <span class="pill">Medical Embedded Systems & RTOS</span>
-        <span class="pill">Advanced Biomedical Equipment</span>
-        <span class="pill">Biomedical Instrumentation</span>
-        <span class="pill">Medical Informatics</span>
-      </div>
+        // Active navigation link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-      <h4 class="subheading">Laboratory Management</h4>
-      <ul>
-        <li>Electronic Devices and Circuits Laboratory</li>
-        <li>Electronic Circuits Laboratory</li>
-        <li>Biomedical Signal Processing Laboratory</li>
-        <li>Embedded Systems Laboratory</li>
-        <li>Transducer and Biosensors Laboratory</li>
-      </ul>
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-      <h4 class="subheading">Project Supervision</h4>
-      <ul>
-        <li>Supervised 18 batches of undergraduate projects and 7 postgraduate projects.</li>
-        <li>Guided student teams showcasing innovative biomedical devices (e.g., EOG-based wheelchair control, IoT blood glucose monitoring, contactless vein and heart-rate detection).</li>
-      </ul>
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
 
-      <h4 class="subheading">Academic & Examination Roles</h4>
-      <ul>
-        <li>Coordinator, TG ECET 2025.</li>
-        <li>External examiner for NIMS, Government Institute of Electronics, UCEOU (ECE), and GRIET, Hyderabad.</li>
-        <li>Chief Superintendent for TET examinations at UCEOU.</li>
-        <li>Observer for competitive examinations including TSLPBRT, TSPSC, TSEAMCET, and CDAC.</li>
-        <li>Presiding Officer, Election Commission of India (poll duties).</li>
-      </ul>
-    </div>
-  </section>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-  <!-- Research & PhD -->
-  <section id="research">
-    <div class="card">
-      <h3 class="section-title">Ph.D. Research</h3>
-      <p><strong>Broad Area:</strong> Medical Image Processing</p>
-      <p><strong>Thesis Title:</strong> “A Novel Pulmonary Nodule Detection and Classification Framework using Statistical and Machine Learning Methods”</p>
-      <p><strong>Supervisor:</strong> Prof. P. Chandra Sekhar, Department of ECE, UCE, Osmania University</p>
-      <p><strong>Year of Award:</strong> February 2023</p>
-    </div>
-  </section>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-  <!-- Publications -->
-  <section id="publications">
-    <div class="card">
-      <h3 class="section-title">Selected Publications</h3>
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
 
-      <h4 class="subheading">Book Chapters / International Proceedings</h4>
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
 
-      <div class="pub-item">
-        <span class="title">Electrooculogram Based Wheelchair Control in Real-Time</span><br>
-        Harikrishna M., Malini M., B. P. Santosh Kumar, <strong>Harish Kuchulakanti</strong> (2023).<br>
-        <span class="pub-meta">In: Proceedings of the Second International Conference on Emerging Trends in Engineering 2023,
-        Advances in Engineering Research, Atlantis Press (Springer Nature).</span>
-      </div>
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
 
-      <div class="pub-item">
-        <span class="title">Impact of Various Data Splitting Ratios on the Performance of Machine Learning Models in the Classification of Lung Cancer</span><br>
-        Nazarkar A., <strong>Harish Kuchulakanti</strong>, Chandra Sekhar P., Sravya K. (2023).<br>
-        <span class="pub-meta">In: Emerging Trends in Engineering 2023, Atlantis Press (Springer Nature).</span>
-      </div>
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-      <div class="pub-item">
-        <span class="title">Unique Contactless Device to Detect Veins and Heart Rate</span><br>
-        M. Sreeja, Chapala Sara Grace, M. Deepika, Harikrishna M., <strong>Harish Kuchulakanti</strong> (2023).<br>
-        <span class="pub-meta">In: Emerging Trends in Engineering 2023, Atlantis Press (Springer Nature).</span>
-      </div>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-      <div class="pub-item">
-        <span class="title">Brain Tumor Detection and Classification Using Transfer Learning Technique</span><br>
-        Ram A.V., <strong>Kuchulakanti H.</strong>, Raj T.S. (2022).<br>
-        <span class="pub-meta">In: Computational Vision and Bio-Inspired Computing, Advances in Intelligent Systems and Computing, vol. 1420, Springer.</span>
-      </div>
+        // Skill bars animation
+        const skillBars = document.querySelectorAll('.skill-progress');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.getAttribute('data-width');
+                    setTimeout(() => {
+                        entry.target.style.width = width + '%';
+                    }, 100);
+                }
+            });
+        }, observerOptions);
 
-      <div class="pub-item">
-        <span class="title">A Review on Biomaterials Based Biosensors for Bilirubin Detection</span><br>
-        Kairamkonda D.D., Bitla S., <strong>Kuchulakanti H.</strong> (2022).<br>
-        <span class="pub-meta">In: Proceedings of Fourth International Conference on Inventive Material Science Applications, Advances in Sustainability Science and Technology, Springer.</span>
-      </div>
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
 
-      <div class="pub-item">
-        <span class="title">A Review on Methods of Treatment for Diabetic Foot Ulcer</span><br>
-        Belly C., Bonula S.P., Kandukuri U.R., <strong>Kuchulakanti H.</strong> (2020).<br>
-        <span class="pub-meta">In: Advances in Decision Sciences, Image Processing, Security and Computer Vision, Learning and Analytics in Intelligent Systems, vol. 3, Springer.</span>
-      </div>
+        // Add dynamic skill bars for visualization
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillCategories = document.querySelectorAll('.skill-category');
+            skillCategories.forEach(category => {
+                const skills = category.querySelectorAll('.skill-list li');
+                if (skills.length > 0) {
+                    skills.forEach((skill, index) => {
+                        const bar = document.createElement('div');
+                        bar.className = 'skill-bar';
+                        const progress = document.createElement('div');
+                        progress.className = 'skill-progress';
+                        progress.setAttribute('data-width', 85 - (index * 5)); // Dynamic width
+                        bar.appendChild(progress);
+                        skill.parentNode.insertBefore(bar, skill.nextSibling);
+                    });
+                }
+            });
+        });
 
-      <div class="pub-item">
-        <span class="title">IoT Aided Non-invasive NIR Blood Glucose Monitoring Device</span><br>
-        Chinthoju A., Chekka J.G., Nadigepu R., <strong>Kuchulakanti H.</strong> (2020).<br>
-        <span class="pub-meta">In: Advances in Decision Sciences, Image Processing, Security and Computer Vision, Springer.</span>
-      </div>
+        // Copy email on click
+        document.querySelectorAll('.contact-item, .contact-card').forEach(item => {
+            const email = item.querySelector('a[href^="mailto:"]');
+            if (email) {
+                item.style.cursor = 'pointer';
+                item.addEventListener('click', () => {
+                    navigator.clipboard.writeText(email.textContent).then(() => {
+                        const originalText = item.innerHTML;
+                        const originalColor = item.style.color;
+                        item.style.color = 'var(--accent-color)';
+                        item.innerHTML = '<i class="fas fa-check"></i> Email copied!';
+                        setTimeout(() => {
+                            item.innerHTML = originalText;
+                            item.style.color = originalColor;
+                        }, 2000);
+                    });
+                });
+            }
+        });
 
-      <div class="pub-item">
-        <span class="title">Early Stage Squamous Cell Lung Cancer Detection</span><br>
-        <strong>Kuchulakanti H.</strong>, Paidimarry C. (2020).<br>
-        <span class="pub-meta">In: Advances in Decision Sciences, Image Processing, Security and Computer Vision, Springer.</span>
-      </div>
-
-      <h4 class="subheading">International Conference Papers</h4>
-
-      <div class="pub-item">
-        <span class="title">Blind Mate: A Friend to the Blind</span><br>
-        D. Kairamkonda, S. Chandana K., <strong>H. Kuchulakanti</strong> (2019).<br>
-        <span class="pub-meta">2019 IEEE 16th India Council International Conference (INDICON).</span>
-      </div>
-
-      <div class="pub-item">
-        <span class="title">A Novel Approach for Lung Segmentation and Lung Nodule Detection</span><br>
-        <strong>Harish Kuchulakanti</strong>, Chandrasekhar P. (2018).<br>
-        <span class="pub-meta">ICRAAESCCT 2018, B.V. Raju Institute of Technology.</span>
-      </div>
-
-      <div class="pub-item">
-        <span class="title">Quantification of RBCs and WBCs using Image Processing Techniques</span><br>
-        <strong>Harish Kuchulakanti</strong> et al. (2018).<br>
-        <span class="pub-meta">ICITE 2018, Osmania University.</span>
-      </div>
-
-      <div class="pub-item">
-        <span class="title">Tremor Quantification and its Measurements on Parkinsonian Patients</span><br>
-        K. Harish et al. (2009).<br>
-        <span class="pub-meta">2009 International Conference on Biomedical and Pharmaceutical Engineering.</span>
-      </div>
-
-      <h4 class="subheading">National Presentation</h4>
-      <div class="pub-item">
-        <span class="title">Non-Invasive Beat-to-Beat BP Measurement</span><br>
-        M. Venkateswara Rao, M. Sailaja, K. Harish, B. Harinatha Reddy.<br>
-        <span class="pub-meta">National Conference on Biotechnology, Bioinformatics and Bioengineering (BBB), Tamil Nadu, 2010.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academic roles, engagements, reviewer -->
-  <section id="activities">
-    <div class="card">
-      <h3 class="section-title">Academic Engagements & Service</h3>
-
-      <h4 class="subheading">Departmental & Institutional Roles</h4>
-      <ul>
-        <li>Faculty Advisor, IEEE EMBS Student Chapter, UCE (A), Osmania University.</li>
-        <li>Departmental Coordinator – Timetables, ERP Cell, Profiling Committee, RUSA, TEQIP-II & III, Biomedical Engineering, UCEOU.</li>
-        <li>Member, NIRF data upload committee and M.E./M.Tech syllabi finalization committee.</li>
-        <li>Treasurer and Ex-General Secretary, Engineering College Teachers Association (C), UCE, OU.</li>
-      </ul>
-
-      <h4 class="subheading">Conference Organization</h4>
-      <ul>
-        <li>Editor, Souvenir – International Conference on Emerging Trends in Engineering (ICETE 2019), UCE (A), OU.</li>
-        <li>Technical Program Committee Member – ICETE 2023, ICETE 2019, ICITE 2018.</li>
-        <li>Chair, Medical Image Processing Session – ICETE 2023, UCEOU.</li>
-      </ul>
-
-      <h4 class="subheading">Workshops Organized</h4>
-      <ul>
-        <li>Student training program on Artificial Intelligence and Machine Learning (online), 5 Aug – 4 Sep 2021.</li>
-        <li>Two-day in-house training on Python Programming (with ESCI), 21–22 Sep 2019, UCEOU.</li>
-        <li>Five-day hands-on workshop on “3D Modeling and Image Processing”, 23–27 Jul 2018, Department of BME, UCEOU (TEQIP-III).</li>
-        <li>National level five-day workshop on “Electronic Product Design”, 2–6 Jan 2017, Department of BME, UCEOU (TEQIP-II).</li>
-      </ul>
-
-      <h4 class="subheading">Reviewer & Academic Service</h4>
-      <ul>
-        <li>Reviewer, IETE Journal of Research (2025).</li>
-        <li>Reviewer, Journal of Autonomous Intelligence (Citescore 1.1).</li>
-        <li>Reviewer, 7th IEEE DISCOVER 2023 (4 submissions) and ICETE 2023 (6 submissions).</li>
-        <li>Reviewer, 2025 International Conference on Artificial Intelligence and Data Engineering (AIDE-2025, IEEE Bangalore Section).</li>
-      </ul>
-
-      <h4 class="subheading">Guest Lectures</h4>
-      <ul>
-        <li>Expert talk on “3D Design and 3D Printer”, ATAL FDP on 3D Printing and Design, Department of BME, UCEOU (12 Nov 2021).</li>
-        <li>Guest lectures on “Maintenance of Ventilators”, Short-Term Training Programme, National Skill Training Institute, Hyderabad (05-09-2018 and 06-09-2018).</li>
-        <li>Guest lecture on “Isolation Amplifiers”, National level workshop on “Electronic Product Design”, Department of BME, UCEOU (2017).</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Workshops & Training -->
-  <section id="workshops">
-    <div class="card">
-      <h3 class="section-title">Workshops, FDPs & Training (Selected)</h3>
-      <ul>
-        <li>Three-day National Workshop on “NAAC Accreditation and Outcome Based Education through AI-Powered Digital Learning”, Osmania University, 3–5 Mar 2025.</li>
-        <li>One-week FDP on “Novel Techniques in Materials Processing, Characterization and Applications”, Vardhaman College of Engineering, 3–7 Feb 2025.</li>
-        <li>ATAL FDP on “Additive Manufacturing Based Surface Modification Techniques for Innovative Medical Solutions”, Department of BME, UCEOU, 6–11 Jan 2025.</li>
-        <li>Short-term course “AI for Healthcare and Instrumentation (AI for HI-2024)”, NIT Jalandhar, 13–17 Nov 2024.</li>
-        <li>Short-term course on Telemedicine and Digital Health, MM-TTC NEHU, 4–9 Mar 2024.</li>
-        <li>FDP on “Machine Learning for Signal and Image Processing”, IIT Guwahati & UCEOU, 4–9 Dec 2023.</li>
-        <li>One-week FDP “AI for Multimedia Processing and Security”, NIT Patna (ISEA, MeitY), Feb 2023.</li>
-        <li>40-hour online program on Medical Image Processing (IIT Roorkee, MNIT Jaipur, NIT Patna, IIITDM Jabalpur, NIT Warangal), Aug–Sep 2022.</li>
-        <li>ATAL FDP on “3D Printing and Design”, Department of BME, UCEOU, Nov 2021.</li>
-        <li>Online faculty training on Artificial Intelligence and Machine Learning, IIT Kanpur, Jun 2021.</li>
-        <li>ATAL FDP on “Machine Learning”, RMK College of Engineering and Technology, Dec 2020.</li>
-        <li>Two-week course “Digital Transformation in Teaching-Learning Process”, IIT Bombay (Swayam, TEQIP-III), Apr 2020.</li>
-        <li>QIP on Medical Imaging (MedImg 2017), IIT Delhi, Apr 2017.</li>
-        <li>Workshops on cognitive sciences, neuro-signal processing, virtual instrumentation, MATLAB for Engineers, research methodology, and procurement guidelines under TEQIP.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Achievements, Products -->
-  <section id="achievements">
-    <div class="card">
-      <h3 class="section-title">Achievements & Innovation</h3>
-      <ul>
-        <li>Team member in showcasing four innovative biomedical products at BioAsia 2017 (Hitex, Hyderabad).</li>
-        <li>Student prototypes showcased in OUCE Hackathon 2023: tinnitus relief ear device (consolation prize).</li>
-        <li>All India GATE rank 1625 (2007).</li>
-        <li>Published international conference paper during M.E. program.</li>
-        <li>Successfully organized large-scale cultural event (Ganesh Navarathri) in University Hostel, 2009.</li>
-        <li>Completed course “Communication Skills and Personality Development”, CELT, Osmania University (2009).</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Memberships -->
-  <section id="memberships">
-    <div class="card">
-      <h3 class="section-title">Professional Memberships</h3>
-      <ul>
-        <li>Member, IEEE Hyderabad Section (No. 94812764).</li>
-        <li>Member, IEEE Engineering in Medicine and Biology Society (EMBS).</li>
-        <li>Member, IEEE Signal Processing Society.</li>
-        <li>Member, IEEE Young Professionals.</li>
-        <li>Life Member, International Association of Engineers (IAENG) – No. 176697.</li>
-        <li>Life Member, Biomedical Engineering Society of India (BMESI) – No. 1386.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Personal & Contact -->
-  <section id="contact">
-    <div class="card contact-card">
-      <h3 class="section-title">Personal Profile & Contact</h3>
-      <p><strong>Name:</strong> Dr. K. Harish</p>
-      <p><strong>Father’s Name:</strong> Sri K. Manmohan Rao</p>
-      <p><strong>Languages Known:</strong> Telugu, English, Marathi, Kannada, Hindi</p>
-      <p><strong>Nationality:</strong> Indian</p>
-
-      <h4 class="subheading">Contact</h4>
-      <p><strong>Institution:</strong> Department of Biomedical Engineering,<br>
-         University College of Engineering (A), Osmania University, Hyderabad, India.</p>
-      <p><strong>Email:</strong> <a href="mailto:harish.k@uceou.edu">harish.k@uceou.edu</a>,
-         <a href="mailto:k.harish501@gmail.com">k.harish501@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+919866289232">+91 98662 89232</a></p>
-      <!--
-        If you upload your PDF CV into the same GitHub repo, you can link it here, e.g.:
-        <p><a href="Dr_K_Harish_CV.pdf" target="_blank">Download Full CV (PDF)</a></p>
-      -->
-    </div>
-  </section>
-</main>
-
-<footer>
-  © <span id="year"></span> Dr. Kuchulakanti Harish · Department of Biomedical Engineering, UCE (A), Osmania University
-</footer>
-
-<script>
-  // Simple script to keep the footer year current
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+        // Add subtle parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
 </body>
 </html>
